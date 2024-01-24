@@ -65,6 +65,7 @@ class ToastContainer extends Component {
   }
 
   componentWillUnmount() {
+    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 1')
     this.keyboardDidShowSub && this.keyboardDidShowSub.remove();
     this.keyboardDidShowSub && this.keyboardDidHideSub.remove();
   }
