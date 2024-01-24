@@ -59,15 +59,17 @@ class ToastContainer extends Component {
   }
 
   componentDidMount() {
-    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH')
+    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 1')
     Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
     Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
+    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 11')
   }
 
   componentWillUnmount() {
-    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 1')
+    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 2')
     this.keyboardDidShowSub && this.keyboardDidShowSub.remove();
     this.keyboardDidShowSub && this.keyboardDidHideSub.remove();
+    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 22')
   }
 
   getToastStyle() {

@@ -30,7 +30,7 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
-    "@codler/react-native-keyboard-aware-scroll-view": "1.0.1",
+    "@codler/react-native-keyboard-aware-scroll-view": "2.0.0",
     "@react-native-community/datetimepicker": "^7.1.0",
     "@react-native-picker/picker": "^1.9.7",
     "blueimp-md5": "^2.5.0",
@@ -95,5 +95,8 @@
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/NativeBase"
+  },
+  "resolutions": {
+    "@codler/react-native-keyboard-aware-scroll-view": "2.0.0"
   }
 }
