@@ -1,7 +1,12 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import { Keyboard, Platform, Animated, PanResponder } from 'react-native';
-import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+import {
+  Keyboard,
+  Platform,
+  Animated,
+  ViewPropTypes,
+  PanResponder
+} from 'react-native';
 import { connectStyle } from 'native-base-shoutem-theme';
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
@@ -54,23 +59,13 @@ class ToastContainer extends Component {
   }
 
   componentDidMount() {
-    this.kbDidShow = Keyboard.addListener(
-      'keyboardDidShow',
-      this.keyboardDidShow
-    );
-    this.kbDidHide = Keyboard.addListener(
-      'keyboardDidHide',
-      this.keyboardDidHide
-    );
+    Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
+    Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
   }
 
   componentWillUnmount() {
-    if (this.kbDidShow !== undefined) {
-      this.kbDidShow.remove();
-    }
-    if (this.kbDidHide !== undefined) {
-      this.kbDidHide.remove();
-    }
+    this.keyboardDidShowSub && this.keyboardDidShowSub.remove();
+    this.keyboardDidShowSub && this.keyboardDidHideSub.remove();
   }
 
   getToastStyle() {
