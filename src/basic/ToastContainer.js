@@ -59,6 +59,7 @@ class ToastContainer extends Component {
   }
 
   componentDidMount() {
+    console.log('GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH')
     Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
     Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
   }
